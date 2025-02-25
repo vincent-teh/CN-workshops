@@ -1,0 +1,119 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{amsfonts}
+
+\usepackage{subcaption}
+\usepackage{appendix}
+\usepackage{listings}
+\usepackage{lmodern}
+\usepackage{color}
+\usepackage{cancel}
+\usepackage{float}
+\usepackage{booktabs}
+
+
+\lstdefinestyle{lfonts}{
+  basicstyle   = \footnotesize\ttfamily,
+  stringstyle  = \color{purple},
+  keywordstyle = \color{magenta}\bfseries,
+  numberstyle   =  \tiny\color{gray}
+  commentstyle = \color{green}\scshape,
+}
+\lstdefinestyle{lnumbers}{
+  numbers     = left,
+  numberstyle = \tiny,
+  numbersep   = 1em,
+  firstnumber = 1,
+  stepnumber  = 1,
+}
+\lstdefinestyle{llayout}{
+  breaklines       = true,
+  tabsize          = 2,
+  columns          = flexible,
+}
+\lstdefinestyle{lgeometry}{
+  xleftmargin      = 20pt,
+  xrightmargin     = 0pt,
+  frame            = tb,
+  framesep         = \fboxsep,
+  framexleftmargin = 20pt,
+}
+\lstdefinestyle{lgeneral}{
+  style = lfonts,
+  style = lnumbers,
+  style = llayout,
+  style = lgeometry,
+}
+\lstdefinestyle{c}{
+    language = {c},
+    style    = lgeneral,
+}
+
+\newcommand{\todo}[1]{{\color{blue}#1}}  % show to-do items in blue
+\setlength{\parskip}{\baselineskip}
+\usepackage[activate={true,nocompatibility},
+            final,
+            tracking=true,
+            kerning=true,
+            factor=1100,
+            stretch=10,
+            shrink=10]{microtype}
+\hypersetup{
+    pdftitle={ title},
+    % pdfpagemode=fullscreen,
+}
+
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\newcounter{questionnum} \setcounter{questionnum}{0}
+
+\setlength{\parindent}{0pt}
+\def\email#1{{\tt#1}}
+
+\lstset{ % set the default style for code listings
+  numbers=left,
+  numberstyle=\scriptsize,
+  numbersep=8pt,
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\color{blue},
+  stringstyle=\color{red},
+  commentstyle=\color{green!70!black},
+  breaklines=true,
+  frame=single,
+  language=c,
+  tabsize=4,
+  showstringspaces=false
+}
+
+
+\begin{document}
+\begin{titlepage}
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{figures/UU_logo.eps}
+  \end{center}
+  \vspace{3em}
+  \begin{center}
+    \Large Computer Network
+  \end{center}
+  \vspace{5em}
+  \begin{center}
+    \Large Workshops 1  \end{center}
+  \vspace{10em}
+  \begin{center}
+    authors
+    \today
+  \end{center}
+\end{titlepage}
+
+
+\include{workshops/workshop-1-question}
+\include{workshops/workshop-1-solution}
+
+
+
+\end{document}
